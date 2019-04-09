@@ -6,6 +6,7 @@ import { deleteCartItem } from '../actions';
 class Cart extends Component {
 
   handleDelete = (id) => {
+    console.log(id, 'checking id')
     this.props.dispatch(deleteCartItem(id));
   }
   render() {
@@ -25,7 +26,7 @@ class Cart extends Component {
             {
               cartItems && cartItems.map((data, i) => 
                 <div className="items">
-                <button className="delete" onClick={() => this.handleDelete(i)}><i className="fas fa-trash-alt"></i></button>
+                <button className="delete" onClick={() => this.handleDelete(data.id)}><i className="fas fa-trash-alt"></i></button>
                   <img src={`https://raw.githubusercontent.com/jeffersonRibeiro/react-shopping-cart/master/src/static/products/${data.sku}_2.jpg`}  width="125px" alt=""/>
                   <h4  className="text-center title">{data.title}</h4>
                   <h5  className="text-center">{data.currencyFormat}{data.price}<span className="installments">or{data.installments}X{twoDigits(data.price/data.installments)}</span></h5>
