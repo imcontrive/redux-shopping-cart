@@ -4,12 +4,6 @@ export default function cart(state = [],action){
       return [...state, action.product]
     }
     case 'DELETE_CART_ITEM': {
-      // const copyCartItems = [...state];
-      // console.log(copyCartItems, 'copied cart items');
-      // return [...copyCartItems.filter((v, i, a) => {
-      //   console.log(v, 'checking products');
-      //   a.includes(v.id !== action.id)
-      // })]
       return [...state].filter(pro => action.id !== pro.id)
     }
     default:

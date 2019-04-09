@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import Products from './components/Products';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import Cart from './components/Cart';
 
 
 class App extends Component {
@@ -18,7 +17,6 @@ class App extends Component {
    
     <>
       <Header/>
-      <Cart />
       <div className="main-wrapper">
         <Sidebar />
         <Products/>
