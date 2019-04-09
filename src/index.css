@@ -1,0 +1,164 @@
+.main-wrapper {
+  display: flex;
+  width: 1180px;
+  margin: 0 auto;
+}
+.isFilter {
+  max-width: 25vw;
+  width: 200px;
+  display:grid;
+  grid-gap: 5px;
+}
+.circle-span {
+  width: 35px;
+  height: 35px;
+  background:rgb(219, 217, 217);
+  display: inline-flex;
+  border-radius:50%;
+  padding: 6px;
+  margin: 5px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+}
+.circle-span:hover {
+  border: 1px solid;
+}
+p {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: serif;
+  color: rgb(156, 156, 156);
+}
+.Products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  width: 900px;
+  padding-left: 30px;
+}
+.text-center {
+  text-align: center;
+}
+.products {
+  width: 200px;
+  border: 1px solid transparent;
+  padding:8px 5px ;
+}
+h5 {
+  font-size: 22px;
+}
+.products:hover {
+  border: 1px solid rgb(175, 174, 174);
+  cursor: pointer;
+}
+.installments {
+  display: block;
+  color:rgb(160, 160, 159);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+button {
+  width: 100%;
+  padding:12px 25px ;
+  background: black;
+  color: white;
+  border:none;
+  font-size: 16px;
+  outline: 0;
+}
+.products:hover button{
+  background:rgb(228, 228, 4);
+}
+hr {
+  width: 9%;
+  border-radius: 5px;
+  border: 1px solid rgb(248,164,155);
+}
+.title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: baseline;
+  justify-content: space-between;
+}
+.dropdown {
+  display:flex;
+  height: 30px;
+}
+.total-items{
+  padding-left: 300px;
+}
+select {
+  height: 20px;
+  display: flex;
+  justify-content:center;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: baseline;
+  justify-content: space-between;
+}
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  background: white;
+}
+.fa-cart-plus {
+  width: 85px;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 8px;
+  color: black;
+  background: #ffffff;
+  padding-bottom: 10px;
+}
+.fa-cart-plus:hover {
+  cursor: pointer;
+  color:red;
+}
+.active {
+  background: teal;
+  cursor: pointer;
+}
+label {
+  border-top: .06em solid #d9d9d9;
+  display:block;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 3em;
+  cursor: pointer;
+  position: relative;
+  transition:  5sec color ease-in-out;  
+}
+
+#shoppingCart {
+  background: darkred;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 8px;
+  height: 100vh;
+  width: 500px;
+  position: relative;
+  left:800px;
+}
+.fa-times-circle-o{
+  color:green;
+}
+.items {
+  display: flex;
+  justify-content: space-around;
+}
+.items:hover .delete {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
