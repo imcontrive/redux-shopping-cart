@@ -146,8 +146,6 @@ label {
   border-radius: 8px;
   height: 100vh;
   width: 500px;
-  position: relative;
-  /* left:800px; */
 }
 .fa-times-circle-o{
   color:green;

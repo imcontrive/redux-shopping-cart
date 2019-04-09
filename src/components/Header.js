@@ -29,10 +29,10 @@ class Header extends Component {
         <div className="headerWrapper">
           <p className="total-items">{products.length} Product(s) found.</p>
           
-          <div className="dropdown">
+          <div className="dropdown center-on-page">
             <h4>Order by:</h4>
-            <div>
-              <select onChange={
+            <div class="select">
+              <select name="slct" id="slct" onChange={
                 (e) => {
                   e.target.value === 'Highest_to_lowest' ? this.props.dispatch(descending()) : e.target.value === 'Lowest_to_highest' ? this.props.dispatch(ascending()) : this.props.dispatch(select());
                 }
@@ -56,3 +56,15 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Header);
+
+{/*
+  <div class="center-on-page">
+    <div class="select">
+      <select name="slct" id="slct">
+      <option value="select">Select</option>
+      <option value="Highest_to_lowest">Highest to lowest</option>
+      <option value="Lowest_to_highest">Lowest to highest</option>
+      </select>
+    </select>
+  </div> 
+</div> */}
