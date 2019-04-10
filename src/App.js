@@ -16,10 +16,12 @@ class App extends Component {
     return (
    
     <>
-      <Header/>
-      <div className="main-wrapper">
-        <Sidebar />
-        <Products/>
+      <div className="parent">
+        <Header />
+        <div className="main-wrapper">
+          <Sidebar />
+          <Products/>
+        </div>
       </div>
     </>
     )

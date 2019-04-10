@@ -23,7 +23,12 @@ import {connect} from 'react-redux';
         {
           products.filter(val => val.availableSizes.some(size => filterSize.length ? (filterSize.includes(size)): size)).map((data,i) =>
             <div className="products" key={i}>
-              <img src={`https://raw.githubusercontent.com/jeffersonRibeiro/react-shopping-cart/master/src/static/products/${data.sku}_1.jpg`}  width="100%" alt=""/>
+              <div className="isFreeShipping">
+                <img src={`https://raw.githubusercontent.com/jeffersonRibeiro/react-shopping-cart/master/src/static/products/${data.sku}_1.jpg`}  width="100%" height="100%" alt=""/>
+                {
+                  data.isFreeShipping ? <p className="free-shipping">Free shipping</p>: ""
+                }
+              </div>
               <h4  className="text-center title">{data.title}</h4>
               <hr></hr>
               <h5  className="text-center">{data.currencyFormat}{data.price}

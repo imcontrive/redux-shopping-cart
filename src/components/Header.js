@@ -20,7 +20,7 @@ class Header extends Component {
         <div className="header-icons">
           <i className="fab fa-github"></i>
           <div id="cart" onClick={this.handleCartOpen}>
-            <i className="fa fa-shopping-cart fa-2x openCloseCart" aria-hidden="true"></i>
+            <img src="https://raw.githubusercontent.com/jeffersonRibeiro/react-shopping-cart/master/src/static/bag-icon.png" alt="ss"/>
           </div>
           {
             this.state.isOpen ? <Cart /> : ''
@@ -31,7 +31,7 @@ class Header extends Component {
           
           <div className="dropdown center-on-page">
             <h4>Order by:</h4>
-            <div class="select">
+            <div className="select">
               <select name="slct" id="slct" onChange={
                 (e) => {
                   e.target.value === 'Highest_to_lowest' ? this.props.dispatch(descending()) : e.target.value === 'Lowest_to_highest' ? this.props.dispatch(ascending()) : this.props.dispatch(select());
@@ -56,15 +56,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Header);
-
-{/*
-  <div class="center-on-page">
-    <div class="select">
-      <select name="slct" id="slct">
-      <option value="select">Select</option>
-      <option value="Highest_to_lowest">Highest to lowest</option>
-      <option value="Lowest_to_highest">Lowest to highest</option>
-      </select>
-    </select>
-  </div> 
-</div> */}
