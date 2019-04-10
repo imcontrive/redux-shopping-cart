@@ -23,7 +23,7 @@ export default function cart(state = [],action){
 function addtocart(cart,elm){
   let flag = false;
   cart.forEach((v,i) => {
-    if(v.pro.id == elm.id){
+    if(v.pro.id === elm.id){
       flag = true;
       v.quant = v.quant + 1;
     }

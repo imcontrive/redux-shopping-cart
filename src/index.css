@@ -153,6 +153,7 @@ label {
   color:green;
 }
 /* Shopping Cart Styles */
+
 #shoppingCart {
   height: 1000px;
 }
@@ -174,8 +175,18 @@ label {
   padding:8px 5px;
 
 }
-
-
+.isFreeShipping {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.free-shipping{
+  font-size: 12px;
+  background: #000;
+  padding: 6px 3px;
+  position: absolute;
+  right: 0;
+ }
 /* .items {
   display: flex;
   justify-content: space-around;
