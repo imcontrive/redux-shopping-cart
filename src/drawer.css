@@ -1,3 +1,4 @@
+/* cart designs */
 .drawer-main{
 	width: 460px;
 	background: #1B1A20;
@@ -34,9 +35,9 @@
 	font-size: 36px;
 	size: 3x;
 }
-hr {
+/* hr {
 	width: 90%;
-}
+} */
 .drawer-btn{
 	margin: 20px;
 	padding: 10px;

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
+import { descending, ascending, select } from '../actions';
+
 
  class Products extends Component {
     //  handlecart
@@ -17,9 +19,28 @@ import {connect} from 'react-redux';
     const filterSize = sizes.filter( s=> s.isClicked === true).map(val => val.size);
     
     return (
-      <>
-        {/* <p>{filterSize.length} Product(s) found.</p> */}
+      <React.Fragment>
+        {/* Header-Wrapper Sort-menu-option */}
+        {/*html of all the Products  */}
         <div  className="Products-wrapper">
+          <div className="headerWrapper">
+            <p className="total-items">{products.length} Product(s) found.</p>
+            <div className="dropdown">
+              <h4>Order by:</h4>
+              <div className="select">
+                <select name="slct" id="slct" onChange={
+                  (e) => {
+                    e.target.value === 'Highest_to_lowest' ? this.props.dispatch(descending()) : e.target.value === 'Lowest_to_highest' ? this.props.dispatch(ascending()) : this.props.dispatch(select());
+                  }
+                }>
+                  <option value="select">Select</option>
+                  <option value="Highest_to_lowest">Highest to lowest</option>
+                  <option value="Lowest_to_highest">Lowest to highest</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="product-container">
         {
           products.filter(val => val.availableSizes.some(size => filterSize.length ? (filterSize.includes(size)): size)).map((data,i) =>
             <div className="products" key={i}>
@@ -39,8 +60,9 @@ import {connect} from 'react-redux';
             </div>
           )
         }
+        </div>
       </div>
-    </>
+      </React.Fragment>
     )
   }
 }
